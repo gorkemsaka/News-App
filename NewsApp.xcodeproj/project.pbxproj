@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		506452C12B639E1D0083782F /* TopHeadlinesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506452C02B639E1D0083782F /* TopHeadlinesCollectionViewCell.swift */; };
 		508C81782B5EBD3F002028A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C81772B5EBD3F002028A3 /* AppDelegate.swift */; };
 		508C817A2B5EBD3F002028A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C81792B5EBD3F002028A3 /* SceneDelegate.swift */; };
 		508C81812B5EBD40002028A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 508C81802B5EBD40002028A3 /* Assets.xcassets */; };
@@ -19,7 +20,6 @@
 		508C81A02B5FD7E9002028A3 /* TopHeadlinesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C819F2B5FD7E9002028A3 /* TopHeadlinesViewModel.swift */; };
 		508C81A32B5FDB88002028A3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 508C81A22B5FDB88002028A3 /* SnapKit */; };
 		508C81A52B5FDB88002028A3 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 508C81A42B5FDB88002028A3 /* SnapKit-Dynamic */; };
-		508C81A82B600549002028A3 /* TopHeadlinesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C81A72B600549002028A3 /* TopHeadlinesTableViewCell.swift */; };
 		50A749D62B626FB700240BA1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 50A749D52B626FB700240BA1 /* SDWebImage */; };
 		50A749D82B626FB700240BA1 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 50A749D72B626FB700240BA1 /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
@@ -38,6 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		506452C02B639E1D0083782F /* TopHeadlinesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlinesCollectionViewCell.swift; sourceTree = "<group>"; };
 		508C81742B5EBD3F002028A3 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		508C81772B5EBD3F002028A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		508C81792B5EBD3F002028A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		508C819A2B5FD404002028A3 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 		508C819C2B5FD4D1002028A3 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		508C819F2B5FD7E9002028A3 /* TopHeadlinesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlinesViewModel.swift; sourceTree = "<group>"; };
-		508C81A72B600549002028A3 /* TopHeadlinesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlinesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +170,7 @@
 		508C81A62B600530002028A3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				508C81A72B600549002028A3 /* TopHeadlinesTableViewCell.swift */,
+				506452C02B639E1D0083782F /* TopHeadlinesCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -260,8 +260,8 @@
 				508C819B2B5FD404002028A3 /* NewsService.swift in Sources */,
 				508C81A02B5FD7E9002028A3 /* TopHeadlinesViewModel.swift in Sources */,
 				508C81782B5EBD3F002028A3 /* AppDelegate.swift in Sources */,
-				508C81A82B600549002028A3 /* TopHeadlinesTableViewCell.swift in Sources */,
 				508C81962B5EC163002028A3 /* Theme.swift in Sources */,
+				506452C12B639E1D0083782F /* TopHeadlinesCollectionViewCell.swift in Sources */,
 				508C817A2B5EBD3F002028A3 /* SceneDelegate.swift in Sources */,
 				508C81902B5EC0EB002028A3 /* TopHeadlinesViewController.swift in Sources */,
 				508C81982B5FC040002028A3 /* NewsModel.swift in Sources */,

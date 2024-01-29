@@ -16,9 +16,10 @@ struct Theme {
     }
     enum Size: CGFloat{
         case topOffset = 15
-        case leadingOffset = 20
-        case trailingOffset = -20
-        case cornerRadiusSize = 30
+        case bottomOffset = -35
+        case leadingOffset = 12
+        case trailingOffset = -12
+        case cornerRadiusSize = 10
     }
     enum Texts: String {
         case appName = "News App"
@@ -35,4 +36,5 @@ struct Theme {
         static let titleColor = UIColor.label
     }
 }
+
 

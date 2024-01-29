@@ -1,15 +1,15 @@
 //
-//  TopHeadlinesTableViewCell.swift
+//  TopHeadlinesCollectionViewCell.swift
 //  NewsApp
 //
-//  Created by Gorkem Saka on 23.01.2024.
+//  Created by Gorkem Saka on 26.01.2024.
 //
 
 import UIKit
 import SnapKit
 import SDWebImage
 
-class TopHeadlinesTableViewCell: UITableViewCell {
+class TopHeadlinesCollectionViewCell: UICollectionViewCell {
     //MARK: - UI Elements
     private let newsFromLabel: UILabel = {
         var label = UILabel()
@@ -53,34 +53,44 @@ class TopHeadlinesTableViewCell: UITableViewCell {
         return label
     }()
     //MARK: - Properties
+    
     //MARK: - Life Cycle
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        configure()
-    }
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    
+    override init(frame: CGRect) {
+           super.init(frame: frame)
+           configure()
+       }
+       required init?(coder: NSCoder) {
+           super.init(coder: coder)
+       }
+   
     //MARK: - Functions
     private func configure(){
         drawDesign()
         constraints()
     }
 }
-//MARK: - Draw Design & Constraints
-extension TopHeadlinesTableViewCell {
+extension TopHeadlinesCollectionViewCell {
     private func drawDesign(){
+        backgroundColor = .white
+        
+        layer.cornerRadius = 20
+        layer.masksToBounds = false
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.gray.cgColor
+        
         addSubview(newsFromLabel)
         addSubview(newsTitleLabel)
         addSubview(newsImageView)
         addSubview(newsSubTitleLabel)
         addSubview(dividerView)
         addSubview(publishedTimeLabel)
+        
     }
     private func constraints(){
         newsFromLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(Theme.Size.topOffset.rawValue)
-            make.leading.equalToSuperview().offset(Theme.Size.leadingOffset.rawValue)
+            make.leading.equalToSuperview().offset(Theme.Size.leadingOffset.rawValue * 2)
         }
         newsTitleLabel.snp.makeConstraints { make in
             make.top.equalTo(newsFromLabel.snp.bottom)
@@ -111,15 +121,17 @@ extension TopHeadlinesTableViewCell {
         }
     }
 }
-//MARK: - Get UI Elements data
-extension TopHeadlinesTableViewCell {
-     func getData(model: Article){
-         newsFromLabel.text = model.source.name
-         newsTitleLabel.text = model.title
-         newsImageView.sd_setImage(with: URL(string: model.urlToImage ?? ""))
-         newsSubTitleLabel.text = model.description
-         publishedTimeLabel.text = model.publishedAt
+
+extension TopHeadlinesCollectionViewCell {
+    func getData(model: Article){
+        newsFromLabel.text = model.source.name
+        newsTitleLabel.text = model.title
+        newsImageView.sd_setImage(with: URL(string: model.urlToImage ?? ""))
+        newsSubTitleLabel.text = model.description
+        publishedTimeLabel.text = model.publishedAt
+   }
+    override func prepareForReuse() {
+        newsImageView.image = nil
     }
 }
-
 
