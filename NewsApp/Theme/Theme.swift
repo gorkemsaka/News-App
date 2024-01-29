@@ -17,9 +17,9 @@ struct Theme {
     enum Size: CGFloat{
         case topOffset = 15
         case bottomOffset = -35
-        case leadingOffset = 12
-        case trailingOffset = -12
-        case cornerRadiusSize = 10
+        case leadingOffset = 10
+        case trailingOffset = -10
+        case cornerRadiusSize = 12
     }
     enum Texts: String {
         case appName = "News App"

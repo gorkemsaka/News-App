@@ -77,7 +77,7 @@ extension TopHeadlinesCollectionViewCell {
         layer.cornerRadius = 20
         layer.masksToBounds = false
         layer.borderWidth = 2
-        layer.borderColor = UIColor.gray.cgColor
+        layer.borderColor = UIColor.white.cgColor
         
         addSubview(newsFromLabel)
         addSubview(newsTitleLabel)
@@ -90,7 +90,7 @@ extension TopHeadlinesCollectionViewCell {
     private func constraints(){
         newsFromLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(Theme.Size.topOffset.rawValue)
-            make.leading.equalToSuperview().offset(Theme.Size.leadingOffset.rawValue * 2)
+            make.leading.equalToSuperview().offset(Theme.Size.leadingOffset.rawValue)
         }
         newsTitleLabel.snp.makeConstraints { make in
             make.top.equalTo(newsFromLabel.snp.bottom)
@@ -108,6 +108,7 @@ extension TopHeadlinesCollectionViewCell {
             make.top.equalTo(newsTitleLabel.snp.bottom).offset(Theme.Size.topOffset.rawValue)
             make.leading.equalTo(newsImageView.snp.trailing).offset(Theme.Size.leadingOffset.rawValue)
             make.trailing.equalToSuperview().offset(Theme.Size.trailingOffset.rawValue)
+            make.height.equalTo(80)
         }
         dividerView.snp.makeConstraints { make in
             make.top.equalTo(newsImageView.snp.bottom).offset(10)
